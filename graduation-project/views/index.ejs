@@ -75,8 +75,8 @@
 					<!-- Social -->
 					<div class="col-md-5 col-sm-5 col-xs-5 header-social"> 
 						<ul>
-							<li><a href="#" title="Facebook">登录</a></li>
-							<li><a href="#" title="Twitter">注册</a></li>
+							<li> <a id="modal-756894" href="#modal-container-756894" role="button" data-toggle="modal">登录</a></li>
+							<li><a href="/reg" title="Twitter">注册</a></li>
 							<li><a href="#" title="Linkedin">关于我们</a></li>
 						</ul>
 					</div><!-- Social /- -->
@@ -119,7 +119,7 @@
 				</div><!-- Container /- -->
 			</div><!-- Menu Block /- -->
 		</header><!-- Header /- -->
-		
+
 			<!-- Slider Section 1 -->
 			<div id="home-revslider" class="slider-section container-fluid no-padding">
 				<!-- START REVOLUTION SLIDER 5.0 -->
@@ -418,7 +418,32 @@
 	</div>
 
 
-	<!-- JQuery v1.12.4 -->
+        <div class="modal fade" id="modal-container-756894" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" align="center">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            登录
+                        </h4>
+                    </div>
+                    <div class="modal-body" align="center">
+                        <form action="/login" method="post">
+                            <label for="name">邮箱名</label>
+                            <input type="text" class="form-control" id="name" name="name"
+                                   placeholder="请输入名称">
+                            <label for="password">密码</label>
+                            <input type="password" class="form-control" id="password" name="password"
+                                   placeholder="请输入密码">
+                            <button type="submit" class="btn btn-primary active" style="margin-top: 2%;">登录</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
 	<script src="js/jquery.min.js"></script>
 
 	<!-- Library - Js -->
@@ -434,8 +459,6 @@
 	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
 	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
 	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
-
-	<!-- Library - Theme JS -->
 	<script src="js/functions.js"></script>
 
 			</div>
