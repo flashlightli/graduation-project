@@ -44,12 +44,11 @@
 	<link rel="stylesheet" type="text/css" href="css/navigation-menu.css">
 	<link rel="stylesheet" type="text/css" href="css/shortcode.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	
-	
-	<!--[if lt IE 9]>
-		<script src="js/html5/respond.min.js"></script>
-    <![endif]-->
-	
+
+
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/html5/respond.min.js"></script>
+    <script src="js/md5.js"></script>
 </head>
 
 <body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
@@ -75,9 +74,9 @@
 					<!-- Social -->
 					<div class="col-md-5 col-sm-5 col-xs-5 header-social"> 
 						<ul>
-							<li> <a id="modal-756894" href="#modal-container-756894" role="button" data-toggle="modal">登录</a></li>
+                            <li> <a id="modal-756894" href="#modal-container-756894" role="button" data-toggle="modal">登录</a></li>
 							<li><a href="/reg" title="Twitter">注册</a></li>
-							<li><a href="#" title="Linkedin">关于我们</a></li>
+							<li><a href="/user" title="Linkedin">关于我们</a></li>
 						</ul>
 					</div><!-- Social /- -->
 				</div><!-- Container /- -->
@@ -428,41 +427,51 @@
                         </h4>
                     </div>
                     <div class="modal-body" align="center">
-                        <form action="/login" method="post">
+                        <form >
                             <label for="name">邮箱名</label>
                             <input type="text" class="form-control" id="name" name="name"
                                    placeholder="请输入名称">
                             <label for="password">密码</label>
                             <input type="password" class="form-control" id="password" name="password"
                                    placeholder="请输入密码">
-                            <button type="submit" class="btn btn-primary active" style="margin-top: 2%;">登录</button>
+                            <button type="button" class="btn btn-primary active" style="margin-top: 2%;" onclick="login()" data-dismiss="modal" aria-hidden="true">登录</button>
                         </form>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
-	<script src="js/jquery.min.js"></script>
-
-	<!-- Library - Js -->
-	<script src="libraries/lib.js"></script>
-
-	<script src="libraries/jquery.countdown.min.js"></script>
-
-	<!-- RS5.0 Core JS Files -->
-	<script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
-	<script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
-	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
-	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
-	<script src="js/functions.js"></script>
-
 			</div>
-	</div>
+    <script>
+        function login() {
+            var name=document.getElementById("name").value;
+            var password=document.getElementById("password").value;
+            $.post("http://127.0.0.1:9000/login",{name:name,password:hex_md5(password)},function (data) {
+              if(data.length==0){
+                  alert("账号密码错误");
+              }else {
+                 document.getElementById("modal-756894").href="/user/"+data[0]._id+"/information";
+                 document.getElementById("modal-756894").innerHTML=data[0].name;
+              }
+            })
+        }
+
+    </script>
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Library - Js -->
+    <script src="libraries/lib.js"></script>
+
+    <script src="libraries/jquery.countdown.min.js"></script>
+
+    <!-- RS5.0 Core JS Files -->
+    <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+    <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="js/functions.js"></script>
 </body>
 </html>
 

@@ -5,27 +5,24 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Express',username:"" });
 });
 router.get('/real', function(req, res, next) {
-        res.render('classify');
+    res.render('classify');
 });
 router.get('/virtual', function(req, res, next) {
     res.render('classify');
 });
-router.post('/login',function (req, res, next) {
-    var md5 = crypto.createHash('md5');   //crypto模块功能是加密并生成各种散列
-    var newpd = md5.update(req.body.password).digest('hex');
-    console.log(newpd);
-});
+
 router.get('/reg', function(req, res, next) {
     console.log(req.body);
     res.render('reg', { title: 'Express' });
 });
 router.post('/regd', function(req, res, next) {
-    console.log(req.body);
-    Http.post("http://127.0.0.1:9000/user",req.body,data=>{
-        console.log(data);
+    var md5 = crypto.createHash('md5');   //crypto模块功能是加密并生成各种散列
+    req.body.password=md5.update(req.body.password).digest('hex');
+    Http.post("http://127.0.0.1:9000/reg",req.body,(err, result)=>{
+        console.log(result);
         res.render('index', { title: 'Express' });
     })
 
