@@ -1,0 +1,19 @@
+FROM node:9.2.0
+
+COPY ./init.sh /root/init.sh
+
+RUN mkdir -p /data/api
+
+COPY ./ /data/api
+
+
+RUN mkdir /data/api/logs
+RUN mkdir /data/api/public
+RUN chmod a+x /data/api/entrypoint.sh
+
+EXPOSE 9000
+
+
+CMD /data/api/entrypoint.sh pro cms
+
+
