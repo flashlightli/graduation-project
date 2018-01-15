@@ -6,10 +6,11 @@
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class=""><!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>0</title>
+    <title>用户中心</title>
     <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../js/md5.js"></script>
 </head>
 
 <body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
@@ -36,7 +37,7 @@
                 <!-- Social -->
                 <div class="col-md-3 col-sm-3 col-xs-3 header-social">
                     <ul style="list-style: none">
-                        <li style="float: left;margin-left: 4%;"> <a id="modal-756894" href="#modal-container-756894" role="button" data-toggle="modal">登录</a></li>
+                        <li style="float: left;margin-left: 4%;"> <a id="modal-756894" href="/user/<%= id%>" role="button" data-toggle="modal"><%= username%></a></li>
                         <li  style="float: left;margin-left: 4%;"><a href="#" title="Twitter">注册</a></li>
                         <li  style="float: left;margin-left: 4%;"><a href="#" title="Linkedin">关于我们</a></li>
                     </ul>
@@ -49,30 +50,32 @@
         <div class="col-md-12 column">
             <div class="row clearfix">
                 <div class="col-md-4 column">
-                    <ul class="nav nav-tabs nav-stacked">
+                    <ul class="nav  nav-stacked">
                         <li class="active">
-                            <a href="/user/<%= id%>/information">用户信息</a>
+                            <a href="/user/<%= id%>">用户信息</a>
                         </li>
                         <li>
-                            <a href="/update">简介</a>
+                            <a href="/user/<%= id%>/insert">新增供求信息</a>
                         </li>
                         <li >
-                            <a href="/upload">信息</a>
+                            <a href="/user/<%= id%>/mange">管理供求信息</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-8 column">
                     <form role="form">
                         <div class="form-group">
-                            <h3>w</h3>
+                            <h3>用户登录邮箱</h3>
+                            <h4><%= username%></h4>
                         </div>
                         <br>
                         <div class="form-group">
                             <label for="exampleInputPassword1">修改密码</label><input type="password" class="form-control" id="exampleInputPassword1" style="width: 40%"/>
                         </div>
-                        <button type="submit" class="btn btn-default">更改信息</button>
+                        <button type="button" class="btn btn-default" onclick="update()">提交更改</button>
                     </form>
                 </div>
+                <div id="viewnone" style="display: none"><%= id%></div>
             </div>
         </div>
     </div>
@@ -82,6 +85,19 @@
         <p>2017-2018 From LYZ 毕业设计</p>
     </div>
 </div>
+</div>
+<script>
+    function update() {
+        var name=document.getElementById("modal-756894").innerHTML;
+        var password=document.getElementById("exampleInputPassword1").value;
+        var id=document.getElementById("viewnone").innerHTML;
+        $.post("http://127.0.0.1:9000/user/"+id,{name:name,password:hex_md5(password)},function (data) {
+           if(data.ok){
+               alert("密码修改成功");
+           };
+        })
+    }
+</script>
 </body>
 </html>
 

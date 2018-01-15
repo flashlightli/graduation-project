@@ -16,7 +16,7 @@ const JsBarcode      = require('jsbarcode');
 // const Canvas         = require("canvas");
 const fs             = require('fs');
 const path           = require('path');
-
+const formidable     = require('formidable');
 // 检查必须携带的参数，只检查第一层
 // 缺少参数则返回false
 exports.checkMandatory = function (params, obj) {
@@ -90,8 +90,21 @@ exports.mkdirs = {
     }
 };
 
-
-
- 
-
-
+exports.uploadImg =function (req,res) {
+    var form = new formidable.IncomingForm();   //创建上传表单
+    form.encoding = 'utf-8';        //设置编辑
+    form.keepExtensions = true;     //保留后缀
+    form.uploadDir=path.resolve(__dirname,'../public');
+    form.maxFieldsSize = 2 * 1024 * 1024;   //文件大小
+    let newname=moment().format("MM-DD-h-mm-ss");
+    let extname = path.extname(req.files.files.name);
+    var newPath =form.uploadDir +'/img/'+newname+extname;
+    console.log(newPath);
+    let  readable =  fs.createReadStream(req.files.files.path);
+    let writable = fs.createWriteStream(newPath);
+    readable.pipe(writable);
+    res.send({
+            status:1,
+            path:newPath
+    });
+}

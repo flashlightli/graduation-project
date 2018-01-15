@@ -101,7 +101,7 @@
 						<div class="navbar-collapse collapse navbar-right" id="navbar">
 							<ul class="nav navbar-nav">
 								<li><a href="/" type="submit">首页</a></li>
-								<li><a href="/real" type="submit">实物</a></li>
+								<li><a href="/supply">供应信息</a></li>
 								<li><a href="/virtual" type="submit">虚拟</a></li>
 								<li><a href="/serve" type="submit">服务</a></li>
 								<li><a href="#">其他</a></li>
@@ -449,7 +449,7 @@
               if(data.length==0){
                   alert("账号密码错误");
               }else {
-                 document.getElementById("modal-756894").href="/user/"+data[0]._id+"/information";
+                 document.getElementById("modal-756894").href="/user/"+data[0]._id;
                  document.getElementById("modal-756894").innerHTML=data[0].name;
               }
             })

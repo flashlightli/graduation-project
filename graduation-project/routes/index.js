@@ -7,11 +7,13 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express',username:"" });
 });
-router.get('/real', function(req, res, next) {
-    res.render('classify');
-});
-router.get('/virtual', function(req, res, next) {
-    res.render('classify');
+router.get('/:type', function(req, res, next) {
+    let type='demand';
+    console.log(type);
+    Http.get("http://127.0.0.1:9000/showinformation/",{type:type},(err, result)=>{
+        result[0].imgsrc=result[0].imgsrc.replace('H:\\毕业设计\\graduation-project\\API\\',"http://localhost:9000/");
+        res.render('classify', { information:result  });
+    })
 });
 
 router.get('/reg', function(req, res, next) {

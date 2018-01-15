@@ -33,4 +33,13 @@ exports = module.exports = {
             next(err)
         }
     },
+    updateUser:async(req,res,next)=>{
+        try{
+            let user=req.body;
+            let result = await userDao.updateUser(user)
+            res.json(result)
+        }catch(err) {
+            next(err)
+        }
+    },
 }
