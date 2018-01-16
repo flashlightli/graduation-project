@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class=""><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>用户中心</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../js/md5.js"></script>
+</head>
+
+<body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
+<div class="main-container" style="height: auto">
+    <!-- Loader -->
+    <div id="site-loader" class="load-complete">
+        <div class="loader">
+            <div class="loader-inner ball-clip-rotate">
+                <div></div>
+            </div>
+        </div>
+    </div><!-- Loader /- -->
+
+    <!-- Header -->
+    <header class="header-section container-fluid no-padding" style="width: 100%;height: 10%;background-color: #f2f2f2;line-height: 60px;">
+        <!-- Top Header -->
+        <div class="top-header container-fluid no-padding">
+            <!-- Container -->
+            <div class="container">
+                <div class="col-md-9 col-sm-9 col-xs-9 dropdown-bar" style="line-height: 60px;">
+                    <h4 style="margin-top: 2.5%;">Welcome&nbsp;&nbsp;&nbsp;To&nbsp;&nbsp;&nbsp;Exchanged&nbsp;&nbsp;&nbsp;House</h4>
+                </div>
+                <!-- Social -->
+                <div class="col-md-3 col-sm-3 col-xs-3 header-social">
+                    <ul style="list-style: none">
+                        <li style="float: left;margin-left: 4%;"> <a id="modal-756894" href="/user/<%= id%>" role="button" data-toggle="modal"><%= username%></a></li>
+                        <li  style="float: left;margin-left: 4%;"><a href="#" title="Twitter">注册</a></li>
+                        <li  style="float: left;margin-left: 4%;"><a href="#" title="Linkedin">关于我们</a></li>
+                    </ul>
+                </div><!-- Social /- -->
+            </div><!-- Container /- -->
+        </div><!-- Top Header /- -->
+    </header>
+    <div class="container" style="margin-top: 3%;">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="row clearfix">
+                    <div class="col-md-4 column">
+                        <ul class="nav  nav-stacked">
+                            <li>
+                                <a href="/user/<%= id%>">用户信息</a>
+                            </li>
+                            <li  class="active">
+                                <a href="/user/<%= id%>/insert">新增供求信息</a>
+                            </li>
+                            <li >
+                                <a href="/user/<%= id%>/mange">管理供求信息</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8 column">
+                            <div class="form-group">
+                                <h4>信息名称</h4>
+                                <input type="text" class="form-control" id="name"
+                                       placeholder="请输入名称" style="width:300px">
+                                <h4>联系方式（邮箱名称）</h4>
+                                <input type="email" class="form-control" id="email"
+                                       placeholder="联系邮箱" style="width:300px">
+                            </div>
+                            <br>
+                        <form action="http://127.0.0.1:9000/img" method="post" enctype="multipart/form-data" id="form">
+                            <div class="form-group" style="margin-top: 1%;">
+                                <label class="sr-only" for="inputfile">图片信息</label>
+                                <input type="file" id="inputfile" name="files" value="选择图片">
+                                <br>
+                                <button  type="submit" onclick="img()">上传图片</button>
+                            </div>
+                        </form>
+                            <br>
+                            <div class="form-group"  style="margin-top: 1%;">
+                                <h4>文本框</h4>
+                                <textarea class="form-control" rows="3" style="width:300px" id="text"></textarea>
+                            </div>
+                            <br>
+                            <div class="radio"  style="margin-top: 3%;">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="demand">需求信息
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="supply">供应信息
+                                </label>
+                            </div>
+                            <br>
+                            <button type="button" class="btn btn-default"  style="margin-top: 3%;width:200px" onclick="insert()">提交</button>
+                    </div>
+                    <div id="viewnone" style="display: none"><%= id%></div>
+                    <div id="src" style="display: none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-section" style=" position:fixed; bottom:0;margin-left: 40%;border-top: dashed">
+        <div class="coyright-content" align="center">
+            <p>2017-2018 From LYZ 毕业设计</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function insert() {
+
+        var username=document.getElementById("modal-756894").innerHTML;
+        var email=document.getElementById("email").value;
+        var name=document.getElementById("name").value;
+        var text=document.getElementById("text").value;
+        var xinxi=document.getElementsByName("optionsRadios");
+        var infor;
+        var imgsrc=document.getElementById("src").innerHTML;
+        for(let i=0;i<xinxi.length; i++){
+            if(xinxi[i].checked){
+                infor=xinxi[i].value
+            }
+        }
+        $.post("http://127.0.0.1:9000/addinformation/",{name:name,email:email,txetara:text,type:infor,imgsrc:imgsrc,user:username},function (data) {
+            alert("信息添加成功");
+        })
+    }
+    function img(){
+        $('#form').submit(function (event) {
+            event.preventDefault();
+            var form = $(this);
+            var formData = new FormData(this);
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                data: formData,
+                mimeType: "multipart/form-data",
+                contentType: false,
+                cache: false,
+                processData: false
+            }).success(function (data) {
+                let temp=JSON.parse(data);
+                document.getElementById("src").innerHTML=temp.path;
+                alert("上传成功");
+            });
+        });
+    }
+</script>
+
+</body>
+</html>
+

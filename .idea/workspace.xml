@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5bc9b344-11e9-4bc7-a4e0-847f5f42dd68" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/about.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/cart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/css/navigation-menu.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/css/plugins.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/css/shortcode.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/images/about.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/images/ftr-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/images/product-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/images/product-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/images/product-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/images/product-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/images/product-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/images/product-6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/images/product-7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/images/product-8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/images/section-seprator.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/images/testi-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/images/testi-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/js/functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/js/html5/respond.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/libraries/fonts/ElegantIcons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/libraries/fonts/ElegantIcons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/libraries/fonts/ElegantIcons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/libraries/fonts/Stroke-Gap-Icons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/libraries/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/libraries/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/libraries/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/libraries/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/libraries/jquery.countdown.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/libraries/lib.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/libraries/lib.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/revolution/css/layers.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/revolution/js/extensions/revolution.extension.actions.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/revolution/js/extensions/revolution.extension.layeranimation.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/revolution/js/extensions/revolution.extension.navigation.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/revolution/js/extensions/revolution.extension.slideanims.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/revolution/js/extensions/revolution.extension.video.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/revolution/js/jquery.themepunch.revolution.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/revolution/js/jquery.themepunch.tools.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/moban1913/user.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graduation-project/routes/index.js" afterPath="$PROJECT_DIR$/graduation-project/routes/index.js" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graduation-project/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="classify.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graduation-project/views/classify.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="45" column="53" lean-forward="false" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graduation-project/views/index.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1980">
+              <caret line="105" column="50" lean-forward="false" selection-start-line="105" selection-start-column="50" selection-end-line="105" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="specific.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graduation-project/views/specific.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="45" column="53" lean-forward="false" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graduation-project/views/user.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="45" column="53" lean-forward="false" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graduation-project/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestBll.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/API/bll/TestBll.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graduation-project/routes/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>owl-stage</find>
+      <find>collection-carousel</find>
+      <find>container</find>
+      <find>dealing</find>
+      <find>cart</find>
+      <find>about</find>
+      <find>revol</find>
+      <find>style</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/在大V在.html" />
+        <option value="$PROJECT_DIR$/moban1913/about.html" />
+        <option value="$PROJECT_DIR$/moban1913/index.html" />
+        <option value="$PROJECT_DIR$/moban1913/cart.html" />
+        <option value="$PROJECT_DIR$/moban1913/user.html" />
+        <option value="$PROJECT_DIR$/graduation-project/public/css/plugins.css" />
+        <option value="$PROJECT_DIR$/graduation-project/views/about.ejs" />
+        <option value="$PROJECT_DIR$/graduation-project/routes/real.js" />
+        <option value="$PROJECT_DIR$/graduation-project/routes/serve.js" />
+        <option value="$PROJECT_DIR$/graduation-project/routes/virtual.js" />
+        <option value="$PROJECT_DIR$/graduation-project/app.js" />
+        <option value="$PROJECT_DIR$/graduation-project/views/index.ejs" />
+        <option value="$PROJECT_DIR$/graduation-project/routes/users.js" />
+        <option value="$PROJECT_DIR$/graduation-project/views/classify.ejs" />
+        <option value="$PROJECT_DIR$/graduation-project/views/specific.ejs" />
+        <option value="$PROJECT_DIR$/graduation-project/views/user.ejs" />
+        <option value="$PROJECT_DIR$/graduation-project/routes/index.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/graduation-project/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="5" />
+    <option name="width" value="1924" />
+    <option name="height" value="1048" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="graduation-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="graduation-project" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="last_opened_file_path" value="H:/新建文件夹" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\毕业设计\graduation-project" />
+      <recent name="H:\毕业设计\graduation-project\graduation-project\views" />
+      <recent name="H:\毕业设计\graduation-project\graduation-project\public\css" />
+      <recent name="H:\毕业设计\graduation-project\graduation-project\public" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.app.js">
+    <configuration name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="app.js" working-dir="$PROJECT_DIR$/graduation-project" />
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.app.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5bc9b344-11e9-4bc7-a4e0-847f5f42dd68" name="Default" comment="" />
+      <created>1514622832304</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1514622832304</updated>
+      <workItem from="1514622833547" duration="3269000" />
+      <workItem from="1514632510469" duration="1250000" />
+      <workItem from="1514686548783" duration="11930000" />
+      <workItem from="1514811585261" duration="2852000" />
+      <workItem from="1514903176021" duration="5362000" />
+    </task>
+    <task id="LOCAL-00001" summary="first">
+      <created>1514908498998</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1514908498998</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="24663000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first" />
+    <option name="LAST_COMMIT_MESSAGE" value="first" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/moban1913/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="112" column="23" lean-forward="false" selection-start-line="112" selection-start-column="23" selection-end-line="112" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moban1913/images/client-2.png" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/collection-3.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/collection-5.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/deal-4.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/deal-5.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/ftr-latestpost-1.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/product.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/product-2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moban1913/images/team-3.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/testi-bg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moban1913/images/deal-3.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/deal-8.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/category-2.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/category-3.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/category-4.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/collection-4.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/product-1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moban1913/images/product-item.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/selling-2.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/product-7.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moban1913/images/product-5.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moban1913/images/product-6.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moban1913/images/selling-3.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/selling-1.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/testi.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/product-8.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moban1913/images/testi-1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moban1913/images/slider-1.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/product-wishlist-2.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/section-seprator.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moban1913/images/product-wishlist-1.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/about.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moban1913/images/blog-1.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/blog-2.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/blog-3.jpg" />
+    <entry file="file://$PROJECT_DIR$/moban1913/images/product-4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moban1913/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1584">
+          <caret line="429" column="45" lean-forward="false" selection-start-line="429" selection-start-column="40" selection-end-line="429" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graduation-project/public/css/plugins.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="95" column="71" lean-forward="true" selection-start-line="95" selection-start-column="71" selection-end-line="95" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graduation-project/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graduation-project/routes/real.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graduation-project/routes/serve.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graduation-project/routes/virtual.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graduation-project/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graduation-project/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="105" column="50" lean-forward="false" selection-start-line="105" selection-start-column="50" selection-end-line="105" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graduation-project/views/specific.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="45" column="53" lean-forward="false" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graduation-project/views/user.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="45" column="53" lean-forward="false" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graduation-project/views/classify.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="45" column="53" lean-forward="false" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graduation-project/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graduation-project/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/bll/TestBll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
