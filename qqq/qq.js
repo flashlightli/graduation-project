@@ -11,7 +11,7 @@ var mailOptions = {
     from: 'liyanzhevip@163.com', // 发送者
     to: '576961950@qq.com', // 接受者,可以同时发送多个,以逗号隔开
     subject: 'Exchanged-House', // 标题
-    html: "<h4>您发布的信息被关注，赶紧去联系用1户576961950@qq.com吧</h4>", // text：文本
+    html: "<h4>您发布的信息被1关注，赶紧去联系用1户576961950@qq.com吧</h4>", // text：文本
     // html: "你好"
 };
 
