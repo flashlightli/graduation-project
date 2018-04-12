@@ -17,6 +17,7 @@ const JsBarcode      = require('jsbarcode');
 const fs             = require('fs');
 const path           = require('path');
 const formidable     = require('formidable');
+const mail           = require('./mail')
 // 检查必须携带的参数，只检查第一层
 // 缺少参数则返回false
 exports.checkMandatory = function (params, obj) {
@@ -107,4 +108,13 @@ exports.uploadImg =function (req,res) {
             status:1,
             path:newPath
     });
+}
+
+exports.sendEmail=function (req,res) {
+    let body=req.body;
+    let from=body.from;
+    let to =body.to;
+    let result=mail.sendEmail(from,to);
+    console.log(result)
+    res.json({message:result})
 }

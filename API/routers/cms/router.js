@@ -12,6 +12,9 @@ router.post('/user/:id',userController.updateUser);
 router.post('/addinformation',informationController.add);
 router.get('/showinformation',informationController.show);
 
+router.get('/information/:id',informationController.detail)
+
 router.post('/img',util.uploadImg);
+router.post('/email',util.sendEmail)
 module.exports = router;
 	

@@ -22,5 +22,9 @@ exports = module.exports = {
     show:async function(query){
         let result=await model.find({type:query.type}).skip((query.currentPage-1)*6).limit(6).sort({_id:-1});
         return result
-    }
+    },
+    detail:async function(query){
+        let result=await model.find({_id:query});
+        return result
+    },
 }

@@ -9,7 +9,7 @@ exports = module.exports = {
     add: async (req, res, next) => {
         try {
             let user = req.body;
-            let result = await informationDao.add(user)
+            let result = await informationDao.add(user);
             res.json(result)
         } catch (err) {
             next(err)
@@ -19,6 +19,15 @@ exports = module.exports = {
         try {
             let query = req.query;
             let result = await informationDao.show(query)
+            res.json(result)
+        } catch (err) {
+            next(err)
+        }
+    },
+    detail: async (req, res, next) => {
+        try {
+            let query = req.params.id;
+            let result = await informationDao.detail(query)
             res.json(result)
         } catch (err) {
             next(err)

@@ -13,7 +13,7 @@ exports.serverId         = process.pid;
 exports.databases = {
     mongo:{
         "name":"demo1",
-        "config":"mongodb://127.0.0.1:27017/graduation"
+        "config":"mongodb://123.206.31.62:27017/graduation"
     }
 }
 

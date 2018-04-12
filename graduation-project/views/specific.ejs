@@ -1,8 +1,4 @@
 ﻿<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class=""><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
@@ -30,24 +26,24 @@
 	<!-- Library - Google Font Familys -->
 	<link href="https://fonts.googleapis.com/css?family=Arizonia|Crimson+Text:400,400i,600,600i,700,700i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 	
-	<link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
+	<link rel="stylesheet" type="text/css" href="../revolution/css/settings.css">
  
 	<!-- RS5.0 Layers and Navigation Styles -->
-	<link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
-	<link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
+	<link rel="stylesheet" type="text/css" href="../revolution/css/layers.css">
+	<link rel="stylesheet" type="text/css" href="../revolution/css/navigation.css">
 	
 	<!-- Library - Bootstrap v3.3.5 -->
-    <link rel="stylesheet" type="text/css" href="libraries/lib.css">
+    <link rel="stylesheet" type="text/css" href="../libraries/lib.css">
 	
 	<!-- Custom - Common CSS -->
-	<link rel="stylesheet" type="text/css" href="css/plugins.css">			
-	<link rel="stylesheet" type="text/css" href="css/navigation-menu.css">
-	<link rel="stylesheet" type="text/css" href="css/shortcode.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/plugins.css">
+	<link rel="stylesheet" type="text/css" href="../css/navigation-menu.css">
+	<link rel="stylesheet" type="text/css" href="../css/shortcode.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	
 	
 	<!--[if lt IE 9]>
-		<script src="js/html5/respond.min.js"></script>
+		<script src="../js/html5/respond.min.js"></script>
     <![endif]-->
 	
 </head>
@@ -128,17 +124,20 @@
 					<!-- Section Header -->
 					<div class="section-header">
 						<h3>商品名称</h3>
-					</div><!-- Section Header /- -->
+					</div>
 					<div class="col-md-6 col-sm-6 col-xs-6">
-						<img src="images/about.jpg" alt="about" />
+						<img src="<%= result.information.imgsrc%>" alt="about" />
 					</div>
 					<div class="col-md-6 col-sm-6 col-xs-6">
 						<div class="about-content">
                             <ul style="text-align:center; list-style:none;">
                                 <li style="margin-top: 6%;"><h3>商品名称</h3></li>
-                                <li style="margin-top: 8%;"><h4>商品售价</h4></li>
-                                <li style="margin-top: 8%;"><h4>信息持有者联系方式</h4></li>
-                                <li style="margin-top: 12%;"> <button type="button" class="btn btn-primary btn-lg" style="text-align:center; ">联系信息人</button></li>
+								<li style="margin-top: 8%;"><h4><%= result.information.name %></h4></li>
+                                <li style="margin-top: 8%;"><h4>商品描述</h4></li>
+								<li style="margin-top: 8%;"><h4><%= result.information.txetara%></h4></li>
+                                <li style="margin-top: 8%;"><h4>信息持有者联系方式</h4>
+								<li style="margin-top: 8%;"><h4 id="toEmail"><%= result.information.user%></h4></li>
+                                <li style="margin-top: 12%;" onclick="sendEmail()"> <button type="button" class="btn btn-primary btn-lg" style="text-align:center;" >联系信息人</button></li>
                             </ul>
                         </div>
 					</div>
@@ -150,9 +149,6 @@
                 </div>
                 <div class="col-md-8 column">
                     <ul class="nav nav-tabs">
-                        <li class="active">
-                            <a href="#">商品信息</a>
-                        </li>
                         <li>
                             <a href="#">留言</a>
                         </li>
@@ -212,31 +208,50 @@
 					</div>
 				</div><!-- Container /- -->
 			</div><!-- Footer Main /- -->
-
 		</div>
 	</div>
 	<!-- JQuery v1.12.4 -->
-	<script src="js/jquery.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
 
 	<!-- Library - Js -->
-	<script src="libraries/lib.js"></script>
+	<script src="../libraries/lib.js"></script>
 	
-	<script src="libraries/jquery.countdown.min.js"></script>
+	<script src="../libraries/jquery.countdown.min.js"></script>
 	
 	<!-- RS5.0 Core JS Files -->
-	<script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
-	<script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
-	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
-	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-	<script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script type="text/javascript" src="../revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+	<script type="text/javascript" src="../revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+	<script type="text/javascript" src="../revolution/js/extensions/revolution.extension.video.min.js"></script>
+	<script type="text/javascript" src="../revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript" src="../revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript" src="../revolution/js/extensions/revolution.extension.navigation.min.js"></script>
 	
 	<!-- Library - Google Map API -->
 	<!---<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW40y4kdsjsz714OVTvrw7woVCpD8EbLE"></script>--->
 
 	<!-- Library - Theme JS -->
-	<script src="js/functions.js"></script>
-	
+	<script src="../js/functions.js"></script>
+	<script>
+		function sendEmail() {
+			var to=document.getElementById("toEmail").innerHTML;
+			var from=document.cookie;
+            var username=document.cookie.split(";");    //.split("=")[1]
+			for(var i=0 ;i<username.length;i++){
+			    var temp=username[i].split("=");
+			    if(temp[0]==' user'){
+			        from=temp[1]
+					console.log(from)
+				}
+			}
+			var to='576961950@qq.com'
+            $.post("http://127.0.0.1:9000/email",{from:from,to:to},function (data) {
+                if(data.length==0){
+                }else {
+                    alert("信息发送成功！")
+                }
+            })
+        }
+	</script>
 </body>
 </html>
 	
