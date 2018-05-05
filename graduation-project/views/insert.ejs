@@ -57,7 +57,7 @@
                                 <a href="/user/<%= id%>/insert">新增供求信息</a>
                             </li>
                             <li >
-                                <a href="/user/<%= id%>/mange">管理供求信息</a>
+                                <a href="/user/<%= id%>/manager">管理供求信息</a>
                             </li>
                         </ul>
                     </div>
@@ -86,13 +86,32 @@
                             </div>
                             <br>
                             <div class="radio"  style="margin-top: 3%;">
+                                <p>信息类型</p>
                                 <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="demand">需求信息
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="demand">需求信息&nbsp;&nbsp;
                                 </label>
                                 <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="supply">供应信息
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="supply">供应信息&nbsp;&nbsp;
                                 </label>
                             </div>
+                        <div class="radio"  style="margin-top: 3%;">
+                            <p>信息内容类型</p>
+                            <label>
+                                <input type="radio" name="options" id="optionsRadios1" value="food">美食&nbsp;&nbsp;
+                            </label>
+                            <label>
+                                <input type="radio" name="options" id="optionsRadios1" value="coat">衣物&nbsp;&nbsp;
+                            </label>
+                            <label>
+                                <input type="radio" name="options" id="optionsRadios1" value="wash">洗护&nbsp;&nbsp;
+                            </label>
+                            <label>
+                                <input type="radio" name="options" id="optionsRadios1" value="elect">电子&nbsp;&nbsp;
+                            </label>
+                            <label>
+                                <input type="radio" name="options" id="optionsRadios2" value="other">其他&nbsp;&nbsp;
+                            </label>
+                        </div>
                             <br>
                             <button type="button" class="btn btn-default"  style="margin-top: 3%;width:200px" onclick="insert()">提交</button>
                     </div>
@@ -100,11 +119,6 @@
                     <div id="src" style="display: none"></div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="copyright-section" style=" position:fixed; bottom:0;margin-left: 40%;border-top: dashed">
-        <div class="coyright-content" align="center">
-            <p>2017-2018 From LYZ 毕业设计</p>
         </div>
     </div>
 </div>
@@ -117,15 +131,22 @@
         var name=document.getElementById("name").value;
         var text=document.getElementById("text").value;
         var xinxi=document.getElementsByName("optionsRadios");
-        var infor;
+        var inxinxi=document.getElementsByName("options");
+        var infor,intype;
         var imgsrc=document.getElementById("src").innerHTML;
         for(let i=0;i<xinxi.length; i++){
             if(xinxi[i].checked){
                 infor=xinxi[i].value
             }
         }
-        $.post("http://127.0.0.1:9000/addinformation/",{name:name,email:email,txetara:text,type:infor,imgsrc:imgsrc,user:username},function (data) {
+        for(let i=0;i<inxinxi.length; i++){
+            if(inxinxi[i].checked){
+                intype=inxinxi[i].value
+            }
+        }
+        $.post("http://127.0.0.1:9000/addinformation/",{name:name,email:email,txetara:text,type:infor,imgsrc:imgsrc,user:username,contentType:intype},function (data) {
             alert("信息添加成功");
+            window.location.reload();
         })
     }
     function img(){

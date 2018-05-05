@@ -23,6 +23,10 @@ exports = module.exports = {
         let result=await model.find(condition);
         return result
     },
+    check: async function(condition){
+        let result=await model.find(condition);
+        return result
+    },
     updateUser:async function(user){
         let result=await mongoHelper.update(model,{name:user.name},user);
         return result

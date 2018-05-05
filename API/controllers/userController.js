@@ -33,6 +33,15 @@ exports = module.exports = {
             next(err)
         }
     },
+    check:async(req,res,next)=>{
+        try{
+            let username=req.params.username;
+            let result = await userDao.check({'name':username})
+            res.json(result)
+        }catch(err) {
+            next(err)
+        }
+    },
     updateUser:async(req,res,next)=>{
         try{
             let user=req.body;

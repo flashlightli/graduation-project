@@ -87,7 +87,7 @@
            <div style="margin-top: 6%;">
                <form action="/regd" method="post">
                <label for="inputEmail3" >Email</label>
-               <input type="email" class="form-control"  placeholder="Email" style="width: 32%;margin-top: 2%;" name="name">
+               <input type="email" class="form-control"  placeholder="Email" style="width: 32%;margin-top: 2%;" name="name" id="email">
                <label for="inputEmail3" style="margin-top: 2%;" >密码</label>
                <input type="password" class="form-control"  placeholder="密码" style="width: 32%;margin-top: 2%;" name="password">
                <label for="inputEmail3" style="margin-top: 2%;">再次输入密码</label>
@@ -103,7 +103,15 @@
             </div>
         </div>
     <script>
-
+          var email = document.getElementById("email")
+        email.onblur=function () {
+            $.get("http://127.0.0.1:9000/usercheck/"+email.value,{},function (data) {
+                if (data.length>0){
+                    alert("邮箱已被注册");
+                    email.value=""
+                }
+            })
+        }
     </script>
     <script src="js/jquery.min.js"></script>
     <script src="libraries/lib.js"></script>

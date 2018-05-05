@@ -7,21 +7,20 @@ var commentSchema = new mongoose.Schema({
     comment : {type : Array}
 });
 var mongoUtil = mongoHelper.pool(settings.databases.mongo.name,settings.databases.mongo.config)
-const model = mongoUtil.model('user',commentSchema, 'user');
+const model = mongoUtil.model('comment',commentSchema, 'comment');
 
 exports = module.exports = {
     get_by_id:async function(goodsId){
-        let result=await model.find({'goodsId':goodsId});
+        let result=await model.findOne({'goodsId':goodsId});
         return result
     },
-    add:async function(user){
-        var newModel= new model(user);
+    add:async function(comment){
+        var newModel= new model(comment);
         let result=await mongoHelper.insert(newModel)
         return result
     },
-    update:async function(user){
-        var newModel= new model(user);
-        let result=await mongoHelper.insert(newModel)
+    update:async function(comment){
+        let result=await mongoHelper.update(model,{goodsId:comment.goodsId},comment);
         return result
     },
 }

@@ -115,6 +115,5 @@ exports.sendEmail=function (req,res) {
     let from=body.from;
     let to =body.to;
     let result=mail.sendEmail(from,to);
-    console.log(result)
     res.json({message:result})
 }

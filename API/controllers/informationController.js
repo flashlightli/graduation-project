@@ -33,4 +33,30 @@ exports = module.exports = {
             next(err)
         }
     },
+    select_by_user: async (req, res, next) => {
+        try {
+            let query = req.params.id;
+            let result = await informationDao.get_by_user(query)
+            res.json(result)
+        } catch (err) {
+            next(err)
+        }
+    },
+    del_by_user: async (req, res, next) => {
+        try {
+            let query = req.params.id;
+            let result = await informationDao.del(query)
+            res.json(result)
+        } catch (err) {
+            next(err)
+        }
+    },
+    hot_select: async (req, res, next) => {
+        try {
+            let result = await informationDao.hot_select()
+            res.json(result)
+        } catch (err) {
+            next(err)
+        }
+    },
 }
