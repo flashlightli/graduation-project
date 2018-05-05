@@ -16,6 +16,7 @@ router.get('/showinformation',informationController.show);
 router.get('/userinformation/:id',informationController.select_by_user);
 router.get('/userDelinformation/:id',informationController.del_by_user);
 router.get('/hotinformation',informationController.hot_select);
+router.post('/searchinformation',informationController.search)
 
 router.get('/information/:id',informationController.detail)
 

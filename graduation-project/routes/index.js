@@ -39,7 +39,6 @@ router.get('/classify/:type/', function(req, res, next) {
     var page=req.query.page;
     var lastpage,nextpage;
     Http.get("http://127.0.0.1:9000/showinformation/",{type:type,currentPage:page,goodsType:goodsType},(err, result)=>{
-        console.log("==========",result)
         if(result == null || result.length== 0) {
 
         }else {
@@ -103,5 +102,21 @@ router.get('/goodsId/:id', function(req, res, next) {
         console.log(results)
         res.render('specific', { result:results});
     });
+});
+
+router.post("/search/:type",function (req,res,next) {
+    var ttype = req.params.type;
+    var s_name = req.body;
+    console.log(ttype,s_name)
+    Http.post("http://127.0.0.1:9000/searchinformation",{ttype:ttype,s_name:s_name},(err, result)=>{
+        if(result == null || result.length== 0) {
+
+        }else {
+            for(var i=0;i<result.length;i++){
+                result[i].imgsrc=result[i].imgsrc.replace("G:\\graduate\\gradu\\API\\","http://localhost:9000/");
+            }
+        }
+        res.render('classify', { information:result ,lastpage:1,nextpage:1,type:ttype});
+    })
 });
 module.exports = router;

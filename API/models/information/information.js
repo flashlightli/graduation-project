@@ -55,4 +55,9 @@ exports = module.exports = {
         let result=await model.find().sort({hot:-1}).limit(8);
         return result
     },
+    search:async function(s_name,ttype){
+        var name = new RegExp(s_name);
+        let result=await model.find({name:name,type:ttype}).limit(8);
+        return result
+    },
 }

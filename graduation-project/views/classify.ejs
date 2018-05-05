@@ -136,11 +136,17 @@
 								<li><a href="/classify/supply">供应信息</a></li>
 								<li><a href="/classify/demand">需求信息</a></li>
 								<li><a href="#">其他</a></li>
-								<li style="margin-top: 7%;">
-									<input  class="form-control"placeholder="输入要查找的东西" type="text" >
+								<li>
+								<form action="/search/<%= type%>" method="post">
+								<ul>
+								<li style="margin-top: 13%;float: left;list-style: none;">
+									<input  class="form-control"placeholder="输入要查找的东西" type="text" name="search">
 								</li>
-								<li style="margin-top: 7%;">
-									<button class="btn btn-search" title="查找" type="button"><i class="icon icon-Search" style="margin-left: -80%;"></i></button>
+								<li style="margin-top: 13%;float: left;list-style: none;">
+									<button class="btn btn-search" title="查找" type="submit"><i class="icon icon-Search" style="margin-left: -80%;"></i></button>
+								</li>
+								</ul>
+								</form>
 								</li>
 							</ul>
 

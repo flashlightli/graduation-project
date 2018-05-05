@@ -59,4 +59,14 @@ exports = module.exports = {
             next(err)
         }
     },
+    search: async (req, res, next) => {
+        try {
+            var s_name = req.body.s_name;
+            var ttype = req.body.ttype;
+            let result = await informationDao.search(s_name,ttype);
+            res.json(result)
+        } catch (err) {
+            next(err)
+        }
+    },
 }
