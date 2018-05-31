@@ -31,14 +31,13 @@
             <!-- Container -->
             <div class="container">
                 <div class="col-md-9 col-sm-9 col-xs-9 dropdown-bar" style="line-height: 60px;">
-                    <h4 style="margin-top: 2.5%;">Welcome&nbsp;&nbsp;&nbsp;To&nbsp;&nbsp;&nbsp;Exchanged&nbsp;&nbsp;&nbsp;House</h4>
-                </div>
+                    <a href="/"><h4 style="margin-top: 2.5%;">Welcome&nbsp;&nbsp;&nbsp;To&nbsp;&nbsp;&nbsp;Exchanged&nbsp;&nbsp;&nbsp;House</h4></a>                </div>
                 <!-- Social -->
                 <div class="col-md-3 col-sm-3 col-xs-3 header-social">
                     <ul style="list-style: none">
                         <li style="float: left;margin-left: 4%;"> <a id="modal-756894" href="/user/<%= id%>" role="button" data-toggle="modal"><%= username%></a></li>
                         <li  style="float: left;margin-left: 4%;"><a href="#" title="Twitter">注册</a></li>
-                        <li  style="float: left;margin-left: 4%;"><a href="#" title="Linkedin">关于我们</a></li>
+                        <li  style="float: left;margin-left: 4%;"><a href="/" title="Linkedin">首页</a></li>
                     </ul>
                 </div><!-- Social /- -->
             </div><!-- Container /- -->
@@ -58,6 +57,9 @@
                             </li>
                             <li >
                                 <a href="/user/<%= id%>/manager">管理供求信息</a>
+                            </li>
+                            <li>
+                                <a href="/user/<%= id%>/remind">与我有关</a>
                             </li>
                         </ul>
                     </div>
@@ -144,7 +146,7 @@
                 intype=inxinxi[i].value
             }
         }
-        $.post("http://127.0.0.1:9000/addinformation/",{name:name,email:email,txetara:text,type:infor,imgsrc:imgsrc,user:username,contentType:intype},function (data) {
+        $.post("http://127.0.0.1:9000/addinformation/",{name:name,email:email,txtarea:text,type:infor,imgsrc:imgsrc,user:username,contentType:intype},function (data) {
             alert("信息添加成功");
             window.location.reload();
         })
@@ -170,7 +172,6 @@
         });
     }
 </script>
-
 </body>
 </html>
 

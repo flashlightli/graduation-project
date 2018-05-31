@@ -63,7 +63,7 @@ router.post('/regd', function(req, res, next) {
     Http.post("http://127.0.0.1:9000/reg",req.body,(err, result)=>{
         res.cookie('user',req.body.name);
         res.cookie('password',req.body.password)
-        res.render('index', { title: '首页' });
+        res.render('reg', { title: '注册' });
     })
 
 });
@@ -106,8 +106,7 @@ router.get('/goodsId/:id', function(req, res, next) {
 
 router.post("/search/:type",function (req,res,next) {
     var ttype = req.params.type;
-    var s_name = req.body;
-    console.log(ttype,s_name)
+    var s_name = req.body.search;
     Http.post("http://127.0.0.1:9000/searchinformation",{ttype:ttype,s_name:s_name},(err, result)=>{
         if(result == null || result.length== 0) {
 

@@ -85,15 +85,14 @@
     </header>
         <div class="container">
            <div style="margin-top: 6%;">
-               <form action="/regd" method="post">
                <label for="inputEmail3" >Email</label>
                <input type="email" class="form-control"  placeholder="Email" style="width: 32%;margin-top: 2%;" name="name" id="email">
                <label for="inputEmail3" style="margin-top: 2%;" >密码</label>
-               <input type="password" class="form-control"  placeholder="密码" style="width: 32%;margin-top: 2%;" name="password">
+               <input type="password" class="form-control"  placeholder="密码" style="width: 32%;margin-top: 2%;" name="password" id="password">
                <label for="inputEmail3" style="margin-top: 2%;">再次输入密码</label>
-               <input type="password" class="form-control"  placeholder="再次输入密码" style="width: 32%;margin-top: 2%;">
-               <button type="submit" class="btn btn-primary" style="width: 12%;margin-top: 2%;">注册</button>
-               </form>
+               <input type="password" class="form-control"  placeholder="再次输入密码" style="width: 32%;margin-top: 2%;" id="password1">
+               <button type="button" class="btn btn-primary" style="width: 12%;margin-top: 2%;" onclick="toreg()">注册</button>
+                   <a href="/"><button type="button" class="btn btn-primary" style="width: 12%;margin-top: 2%;">去登录</button></a>
            </div>
         </div>
 
@@ -112,6 +111,31 @@
                 }
             })
         }
+          var password = document.getElementById("password")
+          password.onblur=function () {
+               var value1 = password.value;
+               if(value1.length < 6){
+                   alert("密码长度必须大于6")
+               }
+          }
+
+          var password1 = document.getElementById("password1")
+          password1.onblur=function () {
+              var value1 = password.value;
+              var value2 = password1.value;
+              if(value1 != value2){
+                  alert("请输入相同的密码")
+              }
+          }
+
+          function toreg() {
+              $.post("http://127.0.0.1:9000/reg/",{name:email.value , password :password.value},function (data) {
+                  alert("注册成功!赶紧去登录吧！");
+                  email.value = "";
+                  password.value = "";
+                  password1.value = "";
+              })
+          }
     </script>
     <script src="js/jquery.min.js"></script>
     <script src="libraries/lib.js"></script>

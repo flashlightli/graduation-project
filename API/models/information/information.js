@@ -5,7 +5,7 @@ const settings      = require(`../../conf/${process.env.NODE_ENV}/settings`);
 var informationSchema = new mongoose.Schema({
     name : {type : String},
     email : {type : String},
-    txetara : {type : String},
+    txtarea : {type : String},
     imgsrc : {type : String},
     user : {type : String},
     type : {type : String},
@@ -26,7 +26,6 @@ exports = module.exports = {
         console.log(query)
         if(query.currentPage=='undefined'){
             query.currentPage =1;
-            console.log("2222222")
         }
         if(query.goodsType!='undefined'){
            condition={

@@ -4,6 +4,7 @@ const util=require('../../util/util');
 const userController=require('../../controllers/userController');
 const informationController=require('../../controllers/informationController');
 const commentController=require('../../controllers/commentController');
+const newsController=require('../../controllers/newsController');
 
 router.post('/reg',userController.add);
 router.post('/login',userController.login);
@@ -16,7 +17,7 @@ router.get('/showinformation',informationController.show);
 router.get('/userinformation/:id',informationController.select_by_user);
 router.get('/userDelinformation/:id',informationController.del_by_user);
 router.get('/hotinformation',informationController.hot_select);
-router.post('/searchinformation',informationController.search)
+router.post('/searchinformation',informationController.search);
 
 router.get('/information/:id',informationController.detail)
 
@@ -25,5 +26,8 @@ router.post('/email',util.sendEmail)
 
 router.get('/comment/:id',commentController.select);
 router.post('/comment',commentController.add);
+router.post('/updatecomment',commentController.update);
+
+router.post('/remind',commentController.search);
 module.exports = router;
 	

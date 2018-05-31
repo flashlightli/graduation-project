@@ -14,7 +14,6 @@
 </head>
 
 <body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
-<body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
 <div class="main-container" style="height: auto">
     <!-- Loader -->
     <div id="site-loader" class="load-complete">
@@ -39,56 +38,49 @@
                     <ul style="list-style: none">
                         <li style="float: left;margin-left: 4%;"> <a id="modal-756894" href="/user/<%= id%>" role="button" data-toggle="modal"><%= username%></a></li>
                         <li  style="float: left;margin-left: 4%;"><a href="#" title="Twitter">注册</a></li>
-                        <li  style="float: left;margin-left: 4%;"><a href="#" title="Linkedin">关于我们</a></li>
+                        <li  style="float: left;margin-left: 4%;"><a href="/" title="Linkedin">首页</a></li>
                     </ul>
                 </div><!-- Social /- -->
             </div><!-- Container /- -->
         </div><!-- Top Header /- -->
     </header>
-<div class="container" style="margin-top: 3%;">
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <div class="row clearfix">
-                <div class="col-md-4 column">
-                    <ul class="nav  nav-stacked">
-                        <li class="active">
-                            <a href="/user/<%= id%>">用户信息</a>
-                        </li>
-                        <li>
-                            <a href="/user/<%= id%>/insert">新增供求信息</a>
-                        </li>
-                        <li >
-                            <a href="/user/<%= id%>/manager">管理供求信息</a>
-                        </li>
-                        <li>
-                            <a href="/user/<%= id%>/remind">与我有关</a>
-                        </li>
-                    </ul>
+    <div class="container" style="margin-top: 3%;">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="row clearfix">
+                    <div class="col-md-3 column">
+                        <ul class="nav  nav-stacked">
+                            <li>
+                                <a href="/user/<%= id%>">用户信息</a>
+                            </li>
+                            <li>
+                                <a href="/user/<%= id%>/insert">新增供求信息</a>
+                            </li>
+                            <li>
+                                <a href="/user/<%= id%>/manager">管理供求信息</a>
+                            </li>
+                            <li class="active">
+                                <a href="/user/<%= id%>/remind">与我有关</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9 column">
+                        <% for(var i =0;i< information.length ;i++){ %>
+                         <p><%= information[i].customer%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在<%= information[i].time%></p>
+                        <p>回复了您&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= information[i].content%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/goodsId/<%= information[i].goodsId %>"> 前去查看</a></p>
+                        <hr>
+                        <% } %>
+                    </div>
+                    <div id="viewnone" style="display: none"><%= id%></div>
                 </div>
-                <div class="col-md-8 column">
-                    <button type="button" class="btn btn-default" onclick="clearCookie()">退出登录</button>
-                    <form role="form">
-                        <div class="form-group">
-                            <h3>用户登录邮箱</h3>
-                            <h4><%= username%></h4>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">修改密码</label><input type="password" class="form-control" id="exampleInputPassword1" style="width: 40%"/>
-                        </div>
-                        <button type="button" class="btn btn-default" onclick="update()">提交更改</button>
-                    </form>
-                </div>
-                <div id="viewnone" style="display: none"><%= id%></div>
             </div>
         </div>
     </div>
-</div>
-<div class="copyright-section" style=" position:fixed; bottom:0;margin-left: 40%;border-top: dashed">
-    <div class="coyright-content" align="center">
-        <p>2017-2018 From LYZ 毕业设计</p>
+    <div class="copyright-section" style=" position:fixed; bottom:0;margin-left: 40%;border-top: dashed">
+        <div class="coyright-content" align="center">
+            <p>2017-2018 From LYZ 毕业设计</p>
+        </div>
     </div>
-</div>
 </div>
 <script>
     function update() {
@@ -96,20 +88,20 @@
         var password=document.getElementById("exampleInputPassword1").value;
         var id=document.getElementById("viewnone").innerHTML;
         $.post("http://127.0.0.1:9000/user/"+id,{name:name,password:hex_md5(password)},function (data) {
-           if(data.ok){
-               alert("密码修改成功");
-           };
+            if(data.ok){
+                alert("密码修改成功");
+            };
         })
     }
 
-    function clearCookie() {
-        document.cookie = 'user='+ ";path=/";
-        document.cookie = 'password='+ ";path=/";
-        window.location.href="/"
+    function torefresh(obj) {
+        var a= obj.id
+        $.get(a,{},function (data) {
+            alert("下架成功");
+            window.location.reload();
+        })
     }
 </script>
-
-</body>
 </body>
 </html>
 

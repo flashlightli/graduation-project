@@ -92,7 +92,7 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a href="index.html" class="navbar-brand">Exchenged <span>House</span></a>
+							<a href="/" class="navbar-brand">Exchenged <span>House</span></a>
 						</div>
 						<!-- Menu Icon -->
 						<div class="navbar-collapse collapse navbar-right" id="navbar">
@@ -127,7 +127,7 @@
                                 <li style="margin-top: 6%;"><h3>商品名称</h3><p id="goodsId" style="display: none"><%= result.information._id %></p></li>
 								<li style="margin-top: 8%;"><h4><%= result.information.name %></h4></li>
                                 <li style="margin-top: 8%;"><h4>商品描述</h4></li>
-								<li style="margin-top: 8%;"><h4><%= result.information.txetara%></h4></li>
+								<li style="margin-top: 8%;"><h4><%= result.information.txtarea%></h4></li>
                                 <li style="margin-top: 8%;"><h4>信息持有者联系方式</h4>
 								<li style="margin-top: 8%;"><h4 id="toEmail"><%= result.information.user%></h4></li>
                                 <li style="margin-top: 12%;" onclick="sendEmail()"> <button type="button" class="btn btn-primary btn-lg" style="text-align:center;" >联系信息人</button></li>
@@ -147,13 +147,20 @@
                         </li>
                     </ul>
                     <div>
+						<hr>
 						<% if(result.comment1 && result.comment1.length >0) { %>
 						<% for(var i=0 ;i< result.comment1.length ;i++){ %>
-                      <h3><%= result.comment1[i].user %>&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                      <h4 style="color: #00B7FF;"><%= result.comment1[i].user %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= i+1%>楼</h4>
                         <p><%= result.comment1[i].comments %></p>
+						<p style="margin-left: 600px"><%= result.comment1[i].time %> <span style="cursor: pointer;" onclick="replyShow('<%= result.comment1[i].user %>',<%= i %>)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a id="modal-238678" href="#modal-container-238678" role="button" class="btn" data-toggle="modal">回复</a></span></p>
+                        <% if (result.comment1[i].others && result.comment1[i].others.length>0 ){ %>
+                        <% for (var j = 0;j<result.comment1[i].others.length;j++){ %>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= result.comment1[i].others[j].from %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回复&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= result.comment1[i].others[j].to %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= result.comment1[i].others[j].content %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= result.comment1[i].others[j].time %> <span style="cursor: pointer;" onclick="rere('<%= result.comment1[i].others[j].from %>','<%= i %>',<%= j %>)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a id="modal-801073" href="#modal-container-801073" role="button" class="btn" data-toggle="modal">回复</a></span></p>
+						<hr>
 						<% } %>
+                        <% } } %>
 						<% }else {%>
-						<h3>暂无评论</h3>
+						<h4>暂无评论</h4>
 						<% } %>
 						<h3>&nbsp;</h3>
                     </div>
@@ -242,6 +249,50 @@
 			</div>
 		</div>
 	</div>
+
+
+    <div class="modal fade" id="modal-container-238678" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        回复&nbsp;&nbsp;&nbsp;&nbsp;<span id="replypeople"></span>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" rows="3" id="replycontent"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="replyend()" aria-hidden="true" data-dismiss="modal" >回复</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-container-801073" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        回复&nbsp;&nbsp;&nbsp;&nbsp;<span id="reReplypeople"></span>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" rows="3" id="rerecontent"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="rereend()" aria-hidden="true" data-dismiss="modal" >回复</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div style="display: none;" id="temp"></div>
+    <div style="display: none;" id="temp2"></div>
 	<!-- JQuery v1.12.4 -->
 	<script src="../js/jquery.min.js"></script>
 
@@ -264,6 +315,57 @@
 	<!-- Library - Theme JS -->
 	<script src="../js/functions.js"></script>
 	<script>
+        function rere(user,i,j){
+            document.getElementById('reReplypeople').innerHTML = user;
+            document.getElementById('temp').innerHTML = i;
+            document.getElementById('temp2').innerHTML = j;
+
+        }
+        function rereend() {
+            var user=document.getElementById('reReplypeople').innerHTML;
+            var from=document.cookie;
+            var username=document.cookie.split(";");    //.split("=")[1]
+            for(var i=0 ;i<username.length;i++){
+                var temp=username[i].split("=");
+                if(temp[0]==' user'){
+                    from=temp[1]
+                }
+            }
+            var  replycontent = document.getElementById('rerecontent').value;
+            var high = document.getElementById('temp').innerHTML;
+            var high2 = document.getElementById('temp2').innerHTML;
+            var goodsId = document.getElementById("goodsId").innerHTML;
+
+            $.post("http://127.0.0.1:9000/updatecomment",{goodsId:goodsId,from:from,to:user,content:replycontent,high:high,high2:high2,big:1},function (data) {
+                window.location.href="/goodsId/"+goodsId ;
+                window.location.reload();
+            })
+        }
+
+        function replyShow(user,i){
+            document.getElementById('replypeople').innerHTML = user;
+            document.getElementById('temp').innerHTML = i;
+        }
+
+        function replyend(){
+            var user=document.getElementById('replypeople').innerHTML;
+            var from=document.cookie;
+            var username=document.cookie.split(";");    //.split("=")[1]
+            for(var i=0 ;i<username.length;i++){
+                var temp=username[i].split("=");
+                if(temp[0]==' user'){
+                    from=temp[1]
+                }
+            }
+            var  replycontent = document.getElementById('replycontent').value;
+            var high = document.getElementById('temp').innerHTML
+            var goodsId = document.getElementById("goodsId").innerHTML;
+
+            $.post("http://127.0.0.1:9000/updatecomment",{goodsId:goodsId,from:from,to:user,content:replycontent,high:high,big:0},function (data) {
+                window.location.href="/goodsId/"+goodsId ;
+                window.location.reload();
+            })
+        }
 
         window.onload=function () {
             var arr = document.cookie.split("; ");
@@ -300,11 +402,11 @@
 			    var temp=username[i].split("=");
 			    if(temp[0]==' user'){
 			        from=temp[1]
-					console.log(from)
 				}
 			}
 			var to='576961950@qq.com'
-            $.post("http://127.0.0.1:9000/email",{from:from,to:to},function (data) {
+            $.post("http://127.0.0.1:9000/email",{from:from,to:to},function (message) {
+                alert(message);
                 if(data.length==0){
                 }else {
                     alert("信息发送成功！")
@@ -314,6 +416,7 @@
 
         function to_comment() {
 		    var comment = document.getElementById("comment").value;
+            var to=document.getElementById("toEmail").innerHTML;
             var from=document.cookie;
             var username=document.cookie.split(";");    //.split("=")[1]
             for(var i=0 ;i<username.length;i++){
@@ -326,10 +429,16 @@
                 alert("请登录")
 			}
 			var goodsId = document.getElementById("goodsId").innerHTML;
-            alert(goodsId)
-            $.post("http://127.0.0.1:9000/comment",{goodsId:goodsId,user:from,comment:comment},function (data) {
-                alert(data)
+            $.post("http://127.0.0.1:9000/comment",{goodsId:goodsId,user:from,comment:comment,havepeople:to}, function (data) {
+                console.log("11111")
+                window.location.href="/goodsId/"+goodsId ;
+                window.location.reload();
+                window.location.replace("http://localhost:8888/goodsId/"+goodsId);
+                console.log("22222")
             })
+            window.location.href="/goodsId/"+goodsId ;
+            window.location.reload();
+            window.location.replace("http://localhost:8888/goodsId/"+goodsId);
         }
 	</script>
 </body>

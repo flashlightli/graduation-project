@@ -23,4 +23,8 @@ exports = module.exports = {
         let result=await mongoHelper.update(model,{goodsId:comment.goodsId},comment);
         return result
     },
+    updateNews:async function(reply){
+        let result=await mongoHelper.update(model,{goodsId:reply.goodsId},reply);
+        return result
+    },
 }

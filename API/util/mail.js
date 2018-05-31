@@ -18,14 +18,13 @@ var mailOptions = {
 function sendEmail(from,to){
     mailOptions.to=to;
     mailOptions.html="<h4>您发布的信息被关注，赶紧去联系用户"+from+"吧</h4>";
-    let message=""
-    transporter.sendMail(mailOptions, function (err, info) {
+    let message =transporter.sendMail(mailOptions, function (err) {
         if (err) {
-            console.log(err);
-            message= '发送失败';
+            return "发送失败"
+        }else {
+            return"发送成功"
         }
-        message= '发送成功'
     });
-    return  message
+    return message;
 }            
 module.exports.sendEmail = sendEmail;
